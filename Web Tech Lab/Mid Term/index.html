@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <form>
+            <h1>Event Registration Form</h1>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><label for="fullname">Full Name :</label></td>
+                            <td><input type="text" id="fullname" name="fullname" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email :</label></td>
+                            <td><input type="email" id="email" name="email" placeholder="@gmail.com" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="num">Phone Number :</label></td>
+                            <td><input type="tel" id="num" name="num" placeholder="+8801xxxxxx" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Gender :</label></td>
+                            <td>
+                                <input type="radio" name="gender" value="male" />Male
+                                <input type="radio" name="gender" value="female" />Female
+                                <input type="radio" name="gender" value="other" />Other
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dob">Date of Birth :</label></td>
+                            <td><input type="date" id="dob" name="dob" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="time">Time of Birth :</label></td>
+                            <td><input type="time" id="time" name="time" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="country ">Country :</label></td>
+                            <td>
+                                <select name="country" id="country">
+                                    <option value="BD">Bangladesh</option>
+                                    <option value="USA">UNITED STATE</option>
+                                    <option value="UK">UNITED KINGDOM</option>
+                                    <option value="NEPAL">NEPAL</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="interests">Interests :</label></td>
+                            <td>
+                                <input type="checkbox" id="interests" name="interests" value="Sports" />Sports
+                                <input type="checkbox" id="interests" name="interests" value="Music" />Music
+                                <input type="checkbox" id="interests" name="interests" value="Art" />Art
+                                <input type="checkbox" id="interests" name="interests" value="Technology" />Technology
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="experience">Experience year :</label>
+                            </td>
+                            <td><input type="number" id="experience" name="experience" min="0" max="20" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="file">Upload CV :</label></td>
+                            <td><input type="file" id="file" name="file" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="profile">Upload Profile :</label></td>
+                            <td><input type="file" id="profile" name="profile" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="explain">Explain Yourself :</label></td>
+                            <td><textarea name="explain" id="explain"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <label for="accept">Accept Terms and Condition <span>*</span></label>
+                                <input type="checkbox" id="accept" name="accept" value />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="button">
+                                <input type="submit" value="Submit" />
+                                <input type="reset" value="Reset" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
