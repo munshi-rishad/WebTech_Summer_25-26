@@ -1,76 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=from>, initial-scale=1.0" />
+        <title>Document</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=from>, initial-scale=1.0">
-    <title>Document</title>
+        <link rel="stylesheet" href="../Css/Lab 4 Exam Style.css" />
+    </head>
 
-    <link rel="stylesheet" href="../Css/Lab 4 Exam Style.css">
-</head>
+    <body>
+        <form>
+            <div class="Form">
+                <fieldset>
+                    <legend>Student Information</legend>
+                    <table>
+                        <tr>
+                            <td><label for="">Full Name (Text)</label></td>
 
-<body>
-    <form>
-        <div class="Form">
+                            <td><label for="email">Email Address</label></td>
+                        </tr>
 
-        
-        <fieldset>
-            <legend>
-                Student Information
-            </legend>
-            <table>
-                <tr>
-                    <td><Label for="">Full Name (Text)</Label></td>
+                        <tr>
+                            <td><input type="text" id="for" name="for" placeholder="Enter your full name" /></td>
+                            <td><input type="email" id="email" name="email" placeholder="your email@example.com" /></td>
+                        </tr>
 
+                        <tr>
+                            <td><label for="password">Password</label></td>
 
-                    <td><Label for="email">Email Address</Label></td>
+                            <td><label for="age">Age (Number)</label></td>
+                        </tr>
 
-                </tr>
+                        <tr>
+                            <td>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Enter Secure password"
+                                />
+                            </td>
+                            <td><input type="number" id="age" name="age" placeholder="Enter your age" /></td>
+                        </tr>
 
-                <tr>
-                    <td><input type="text" id="for" name="for" placeholder="Enter your full name"></td>
-                    <td><input type="email" id="email" name="email" placeholder="your email@example.com"></td>
+                        <tr>
+                            <td><label for="date">Experiment Date</label></td>
 
-                </tr>
+                            <td><label for="phone">Phone Number (Tel)</label></td>
+                        </tr>
 
-                <tr>
-                    <td><Label for="password">Password</Label></td>
-
-
-                    <td><Label for="age">Age (Number)</Label></td>
-
-                </tr>
-
-                <tr>
-                    <td><input type="password" id="password" name="password" placeholder="Enter Secure password"></td>
-                    <td><input type="number" id="age" name="age" placeholder="Enter your age"></td>
-
-                </tr>
-
-                <tr>
-                    <td><Label for="date">Experiment Date</Label></td>
-
-
-                    <td><Label for="phone">Phone Number (Tel)</Label></td>
-
-                </tr>
-
-                <tr>
-                    <td><input type="date" id="date" name="date"></td>
-                    <td><input type="tel" id="phone" name="phone" placeholder="+880XXXXXXXXXX"></td>
-
-                </tr>
-
-
-
-            </table>
-        </fieldset>
-        <div class="button">
-            <input type="submit" value="SUBMIT" />
-            <input type="reset" value="CLEAR" />
-        </div>
-        </div>
-    </form>
-</body>
-
+                        <tr>
+                            <td><input type="date" id="date" name="date" /></td>
+                            <td><input type="tel" id="phone" name="phone" placeholder="+880XXXXXXXXXX" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <div class="button">
+                    <input type="submit" value="SUBMIT" />
+                    <input type="reset" value="CLEAR" />
+                </div>
+            </div>
+        </form>
+    </body>
 </html>
