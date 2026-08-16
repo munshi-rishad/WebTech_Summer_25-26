@@ -1,12 +1,11 @@
 <?php
 
-$username ="";
-$email ="";
-$password ="";
-$website ="";
-$comment ="";
-$gender ="";
-
+$username = "";
+$email = "";
+$password = "";
+$website = "";
+$comment = "";
+$gender = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -17,23 +16,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = trim($_POST["comment"]);
     $gender = trim($_POST["gender"]);
 
+    $valid = true;
+
     if (empty($username) || strlen($username) < 5) {
         echo "Username is required and must be at least 5 characters long";
+        $valid = false;
     }
 
     if (empty($email) || strpos($email, "@gmail.com") === false) {
         echo "Email is required and must contain '@gmail.com'";
+        $valid = false;
     }
 
     if (empty($password) || strlen($password) < 8) {
         echo "Password is required and must be at least 8 characters long";
+        $valid = false;
     }
+
     if (empty($website) || strlen($website) < 10) {
         echo "Website is required and must be at least 10 characters long";
+        $valid = false;
     }
+
     if (empty($comment)) {
         echo "Comment is required and cannot be empty";
+        $valid = false;
+    }
+
+    if (empty($gender)) {
+        echo "Gender is required";
+        $valid = false;
+    }
+
+    if ($valid) {
+
+        $jsonfile = "../Model/user.json";
+        $users = [];
+
+        if (file_exists($jsonfile)) {
+
+            $jsonData = file_get_contents($jsonfile);
+
+            $users = json_decode($jsonData, true) ?? [];
+
+            $users[] = [
+                "username" => $username,
+                "email" => $email,
+                "password" => password_hash($password, PASSWORD_DEFAULT),
+                "website" => $website,
+                "comment" => $comment,
+                "gender" => $gender,
+                "timestamp" => time()
+            ];
+
+            file_put_contents(
+                $jsonfile,
+                json_encode($users, JSON_PRETTY_PRINT)
+            );
+        }
     }
 }
-
 ?>
